@@ -3,8 +3,25 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+
 </head>
-<body>
+<body background = "city.jpg">
+
+<form id="NewPost" onsubmit ="return NewPost()" method="post">
+  <div class="container">
+    <label><b>New Post</b></label>
+    <input type="text" placeholder="What's happening?" name="newpost" required>
+ </div>
+ 
+ <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <button type="button" class="postbtn">Post</button>
+  </div>
+ </form>
+ 
+
 
 </body>
 </html>

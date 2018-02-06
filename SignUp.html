@@ -7,21 +7,41 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css" />
 </head>
 
-<body>
+<body background = "city.jpg">
 
-<h1>Sign Up Page</h1>
+<h2>Sign Up Page</h2>
+
+<div><a href = "index.html">Home</a></div>
 
 <form id="SignUp" onsubmit ="return SignUpForm()" method="post">
-<table>
+  <div class="container">
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
- 	<tr><td>Email: </td><td> <input type="text" name="email" size="30" /></td></tr>
- 	<tr><td>Username: </td><td> <input type="text" name="uname" size="30" /></td></tr>
- 	<tr><td>Password: </td><td> <input type="password" name="pswd" size="30" /></td></tr>      
- 	<tr><td>Confirm Password: </td><td> <input type="password" name="pswdr" size="30" /></td></tr>             
-</table>
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
-<p><input type="submit" name="SignUp" value="SignUp" />
-<input type="reset" name="Reset" value="Reset" /></p>
+    <label><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="rpsw" required>
+    
+     <label><b>Date of birth</b></label>
+    <input type="text" placeholder="Date of Birth" name="dob" required>
+    
+     <label><b>Profile Picture</b></label>
+    <input type="file" placeholder="Upload Picture" name="pic" required>
+        
+        
+    <button type="submit">Login</button>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Reset</button>
+	<span class = "fltrt">Already have an account? <a href = "Login.html">Login</a> </span>
+	</div>
 </form>
 
 </body>
