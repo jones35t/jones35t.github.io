@@ -3,27 +3,48 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>New Post</title>
-
+<script type="text/javascript" src="main.js"> </script> 
 <link rel="stylesheet" type="text/css" href="mystyle.css" />
+
+        <script type="text/javascript">
+            function showCharacterCount(textarea) {
+				var maxLength = 250;
+                var messageLength = textarea.value.length; //get length of post being typed
+                document.getElementById("messageCounter").innerHTML = maxLength - messageLength;
+                if (maxLength - messageLength < 0){
+                	document.getElementById("messageCounter").innerHTML = "Post is too long! " + -Math.abs(maxLength - messageLength);
+                }
+                }
+            window.onload=function(){
+                document.getElementById("message").onkeyup = function() { //listens for keyboard key up
+                    showCharacterCount(this);
+                };
+            };
+
+        </script>
 
 </head>
 <body>
 
 <div><a href = "index.html">Home</a></div>
 
-<form id="NewPost" onsubmit ="return NewPost()" method="post">
+<form id="NewPost"  method="post">
   <div class="container">
-    <label><b>New Post</b></label>
-    <input type="text" placeholder="What's happening?" name="newpost" required>
+    <label><b>New Post</b></label><br>
+    <label id="post_msg" class="err_msg"></label>
+    <textarea name="message" id="message" placeholder="Whats happening?"></textarea>
+     <p id="messageCounter">250</p>
  </div>
  
  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <button type="button" class="postbtn">Post</button>
+    <button type="reset" class="cancelbtn">Cancel</button>
+    <button type="submit" class="postbtn">Post</button>
   </div>
  </form>
  
-
+<script>
+document.getElementById("NewPost").addEventListener("submit",postForm,false);
+</script>
 
 </body>
 </html>

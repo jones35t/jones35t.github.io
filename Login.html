@@ -2,36 +2,43 @@
 <html>
 <head>
 
-<title>Login</title> 
-
+<title>Login Page</title> 
+<script type="text/javascript" src="main.js"> </script> 
 <link rel="stylesheet" type="text/css" href="mystyle.css" />
 </head>
 
 <body>
 
-<h2>Login Form</h2>
+<h2>Login Page</h2>
 
 <div><a href = "index.html">Home</a></div>
 
-<form action="/action_page.php">
+<form id="Login" method="post">
+<table>
+<tr><td></td><td><label id="email_msg" class="err_msg"></label></td></tr>
+<tr><td>Email: </td><td> <input type="text" name="email" size="30" /></td> </tr>
 
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
+<tr><td></td><td><label id="pswd_msg" class="err_msg"></label></td></tr>
+<tr><td>Password: </td><td> <input type="password" name="password" size="30"/></td></tr>
 
-  </div>
+
+</table>
+    
+
+  
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class = "fltrt">Need an Account?<a href = "SignUp.html">SignUp</a></span>
-  </div>
+  	<button type="submit">Login</button>
+    <button type="reset" class="cancelbtn">Reset</button>
+	<span class = "fltrt">Need an account? <a href = "SignUp.html">Sign Up</a> </span>
+	</div>
 </form>
 
+<script>
+document.getElementById("Login").addEventListener("submit", LoginForm, false);
+document.getElementById("Login").addEventListener("reset", ResetLogin, false);
+</script>
 
 </body>
 </html>

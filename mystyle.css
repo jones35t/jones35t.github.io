@@ -1,8 +1,17 @@
 form {
     border: 3px solid #f1f1f1;
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
 }
+
+table{
+	background-color:#e6e6e6;
+}
+
+textarea {
+                min-width: 350px;
+                max-width: 350px;
+            }
 
 body{
 	background-image: url("city.jpg");
@@ -39,6 +48,7 @@ section {
     float: left;
     width: 60%;
 }
+
 
 aside {
     background-color:solid grey;
